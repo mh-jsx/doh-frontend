@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --family-primary: 'Circular Std';
+
+  --background-color: rgba(255, 255, 255, 0.87);
+  --color: #242424;
+}
+
+body,
+html {
+  font-family: var(--family-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: var(--background-color);
+  background: url('./assets/images/bg.png') no-repeat center/cover;
+
+  color: var(--color);
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+
+  margin: 0;
+  height: 100vh;
+}

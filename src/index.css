@@ -1,3 +1,4 @@
+@import url('./styles/custom-scroll-bar.css');
 /* All the configs & default css here */
 
 @tailwind base;
@@ -9,11 +10,17 @@
   --family-secondary: 'Circular Std Book';
 
   --color-primary: #19d3c5;
-  --color-primary-light: '#19D3C526';
+  --color-primary-300: #c0ece9;
+  --color-primary-light: #d4efed;
   --color-secondary: #2d2d2d;
+  --color-secondary-light: #2d2d2d33;
   --color-white: rgba(255, 255, 255, 0.87);
+
   --color-gray: #797979;
+  --color-gray-400: #bcbbbb;
+  --color-gray-100: #f6f6f6;
   --color-dark-gray: #404040;
+  --color-dark-gray-100: #7777771a;
 
   --base-font-size: 16px;
   --base-line-height: 1.3;

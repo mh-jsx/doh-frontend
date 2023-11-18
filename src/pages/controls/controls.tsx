@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import twc from 'tw-classnames';
 
-import { controls } from './core/data';
+import { controls } from './core/_data';
 
 function Controls() {
   return (

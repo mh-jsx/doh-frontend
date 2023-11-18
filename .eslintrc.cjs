@@ -28,6 +28,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     'import/prefer-default-export': 'off',
     'import/no-unresolved': 'off',
+    'react/require-default-props': 'off',
   },
   settings: {
     'import/resolver': {

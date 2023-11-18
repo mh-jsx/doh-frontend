@@ -14,6 +14,7 @@ import ErrorBoundary from 'routes/error-boundary';
 
 import Custom from 'pages/controls/custom/cusstom';
 import Error from 'pages/error/error';
+import OrderPlaced from 'pages/orders/order-placed';
 
 import { PrivateRoutes } from './private-routes';
 import WithSuspense from './with-suspense';
@@ -36,9 +37,12 @@ function AppRoutes() {
           <Route index element={<Controls />} />
           <Route path='custom' element={<Custom />} />
         </Route>
-        <Route path='/orders' element={<Orders />} />
-        <Route path='/report' element={<Report />} />
-        <Route path='/personal-assistant' element={<PersonalAssistant />} />
+        <Route path='orders' element={<Outlet />}>
+          <Route index element={<Orders />} />
+          <Route path='order-placed' element={<OrderPlaced />} />
+        </Route>
+        <Route path='report' element={<Report />} />
+        <Route path='personal-assistant' element={<PersonalAssistant />} />
 
         {currentUser && (
           <>

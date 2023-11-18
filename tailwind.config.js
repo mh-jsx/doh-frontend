@@ -8,6 +8,8 @@ export default {
       sm: '0.875rem',
       // 16px
       base: '1rem',
+      // 18px
+      lg: '1.125rem',
       // 20px
       xl: '1.25rem',
       // 27px
@@ -18,10 +20,16 @@ export default {
     extend: {
       colors: {
         primary: 'var(--color-primary)',
+        'primary-300': 'var(--color-primary-300)',
         'primary-light': 'var(--color-primary-light)',
         secondary: 'var(--color-secondary)',
+        'secondary-light': 'var(--color-secondary-light)',
+
         gray: 'var(--color-gray)',
         'dark-gray': 'var(--color-dark-gray)',
+        'gray-100': 'var(--color-gray-100)',
+        'gray-400': 'var(--color-gray-400)',
+        'dark-gray-100': 'var(--color-dark-gray-100)',
       },
       fontFamily: {
         primary: ['Circular Std', 'sans-serif'],
@@ -39,6 +47,7 @@ export default {
       },
       boxShadow: {
         primary: '0px 0px 15px var(--color-primary)',
+        secondary: '2px 3px 10px var(--color-dark-gray-100)',
       },
       spacing: {
         30: '7.5rem',
@@ -48,13 +57,14 @@ export default {
   },
   plugins: [
     plugin(({ addVariant, addUtilities }) => {
-      addUtilities({
-        '.flex-centered': {
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        },
-      });
+      addVariant('path-stroke', ['&>g>g>line', '&>g>g>path']),
+        addUtilities({
+          '.flex-centered': {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
+        });
     }),
   ],
 };

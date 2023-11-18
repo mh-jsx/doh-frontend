@@ -15,7 +15,7 @@ function Switch() {
 
       <div
         className={twc(
-          'transition inline-flex items-center justify-center gap-2 leading-none [&>span]:text-white bg-gray-600 rounded-3xl text-xxs h-7 w-18',
+          'transition inline-flex items-center justify-center gap-2 leading-none [&>span]:text-white bg-gray-600 rounded-3xl text-xs h-7 w-18',
           checked ? 'bg-primary' : 'bg-danger-500'
         )}
       >

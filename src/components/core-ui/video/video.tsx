@@ -6,7 +6,7 @@ import twc from 'tw-classnames';
 
 import PauseIcon from 'assets/icons/pause-icon.svg?react';
 import PlayIcon from 'assets/icons/play-icon.svg?react';
-import sample from 'assets/media/sample.mp4';
+import sample from 'assets/media/sample1.mp4';
 
 import Button from '../button/button';
 
@@ -37,14 +37,23 @@ function Video({ isPip }: Props) {
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            // Autoplay started successfully
+            // update saved state
+            const currentState = {
+              currentTime: videoRef.current?.currentTime,
+              playing: true,
+            };
+            sessionStorage.setItem('videoState', JSON.stringify(currentState));
           })
-          .catch(() => {
-            // Autoplay failed because the user didn't interact with the document
-          });
+          .catch(() => {});
       }
     } else if (control === 'pause') {
       videoRef?.current?.pause();
+      // update saved state
+      const currentState = {
+        currentTime: videoRef.current?.currentTime,
+        playing: false,
+      };
+      sessionStorage.setItem('videoState', JSON.stringify(currentState));
     }
   };
 
@@ -68,7 +77,7 @@ function Video({ isPip }: Props) {
 
     // when unmount update the state
     return () => {
-      if (vRef) {
+      if (vRef && vRef.currentTime && isPlaying && location.pathname !== '/') {
         const currentState = {
           currentTime: vRef.currentTime,
           playing: isPlaying,
@@ -89,7 +98,7 @@ function Video({ isPip }: Props) {
     if (videoRef.current) {
       videoRef.current.addEventListener('ended', () => {
         setIsPlaying(false);
-        localStorage.removeItem('videoState');
+        sessionStorage.removeItem('videoState');
       });
     }
   }, []);
@@ -106,6 +115,8 @@ function Video({ isPip }: Props) {
         ref={videoRef}
         className={twc('border-4 border-gray-400 outline-none rounded-xl', isPip ? 'w-96' : 'relative w-full')}
         poster=''
+        autoPlay={false}
+        muted
       >
         <track kind='captions' />
         <source src={sample} type='video/mp4' />

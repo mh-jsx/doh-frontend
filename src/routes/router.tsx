@@ -1,10 +1,18 @@
 import { lazy } from 'react';
-import { Navigate, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import {
+  Navigate,
+  Outlet,
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from 'react-router-dom';
 
 import Layout from 'components/layout/layout';
 
 import ErrorBoundary from 'routes/error-boundary';
 
+import Custom from 'pages/controls/custom/cusstom';
 import Error from 'pages/error/error';
 
 import { PrivateRoutes } from './private-routes';
@@ -24,7 +32,10 @@ function AppRoutes() {
     createRoutesFromElements(
       <Route element={<Layout />} errorElement={<ErrorBoundary />}>
         <Route path='/' element={<Presentations />} />
-        <Route path='/controls' element={<Controls />} />
+        <Route path='controls' element={<Outlet />}>
+          <Route index element={<Controls />} />
+          <Route path='custom' element={<Custom />} />
+        </Route>
         <Route path='/orders' element={<Orders />} />
         <Route path='/report' element={<Report />} />
         <Route path='/personal-assistant' element={<PersonalAssistant />} />

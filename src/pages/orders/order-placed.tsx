@@ -1,4 +1,4 @@
-import Button from 'components/button/button';
+import Button from 'components/core-ui/button/button';
 
 import useBack from 'hooks/use-back';
 
@@ -20,9 +20,9 @@ function OrderPlaced() {
 
       <hr className='inline-block border-2 rounded-md w-30 border-primary' />
       {/* footer */}
-      <div className='mt-10 sticky bottom-0 left-0 !justify-start w-full px-6 py-5 bg-gray-100 flex-centered gap-12'>
+      <div className='mt-24 sticky bottom-0 left-0 !justify-start w-full px-6 py-5 bg-gray-100 flex-centered gap-12'>
         <Button onClick={handleBack} variant='default'>
-          Cancel
+          Close
         </Button>
         <ButlerCall handleClick={handleButlerCall} />
       </div>

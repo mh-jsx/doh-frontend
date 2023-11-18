@@ -9,14 +9,14 @@ function Controls() {
     <div className='mt-32'>
       <ul className='flex-centered gap-7'>
         {controls &&
-          controls.map(({ id, title, Icon, iconClassName, path, textClassName }) => (
+          controls.map(({ id, title, Icon, path, textClassName, width, height }) => (
             <li key={id}>
               <Link
                 className='w-48 h-48 text-center transition-all duration-300 ease-in rounded-md bg-dark-gray backdrop-blur-xl flex-centered hover:shadow-primary'
                 to={path}
               >
                 <div>
-                  <img className={twc('inline-block', iconClassName)} src={Icon} alt='icon' />
+                  {Icon && <Icon width={width} height={height} className='inline-block' />}
                   <p className={twc('mt-9 text-xl', textClassName)}>{title}</p>
                 </div>
               </Link>

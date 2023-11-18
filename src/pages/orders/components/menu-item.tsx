@@ -1,6 +1,6 @@
 import twc from 'tw-classnames';
 
-import Button from 'components/button/button';
+import Button from 'components/core-ui/button/button';
 
 import useCounter from 'hooks/use-counter';
 

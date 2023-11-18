@@ -1,4 +1,4 @@
-import Button from 'components/button/button';
+import Button from 'components/core-ui/button/button';
 
 import FoodIcon from 'assets/icons/food.svg?react';
 

@@ -12,18 +12,18 @@ import Layout from 'components/layout/layout';
 
 import ErrorBoundary from 'routes/error-boundary';
 
-import Custom from 'pages/controls/custom/cusstom';
 import Error from 'pages/error/error';
-import OrderPlaced from 'pages/orders/order-placed';
 
 import { PrivateRoutes } from './private-routes';
 import WithSuspense from './with-suspense';
 
 const Orders = lazy(() => import('pages/orders/orders'));
+const OrderPlaced = lazy(() => import('pages/orders/order-placed'));
 const PersonalAssistant = lazy(() => import('pages/personal-assistant/personal-assistant'));
 const Presentations = lazy(() => import('pages/presentation/presentations'));
 const Report = lazy(() => import('pages/report/report'));
 const Controls = lazy(() => import('pages/controls/controls'));
+const Custom = lazy(() => import('pages/controls/custom/custom'));
 
 function AppRoutes() {
   // TODO: get current user from AUTH context

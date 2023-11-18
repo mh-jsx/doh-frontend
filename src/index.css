@@ -18,10 +18,17 @@
 
   --color-gray: #797979;
   --color-gray-400: #bcbbbb;
+  --color-gray-150: #eeeeee;
   --color-gray-100: #f6f6f6;
   --color-dark-gray: #404040;
   --color-dark-gray-100: #7777771a;
 
+  --color-warning-300: #fff6d9;
+  --color-warning-400: #fbe6a2;
+  --color-warning-500: #ffd95a;
+  --color-warning-600: #ffcb1f;
+
+  --color-danger-500: #ef4823;
   --base-font-size: 16px;
   --base-line-height: 1.3;
   --base-spacing: 1rem;

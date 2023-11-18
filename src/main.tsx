@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import 'assets/circular-std/fonts.css';
+import 'assets/fonts/circular-std/fonts.css';
 
 import App from './App';
 

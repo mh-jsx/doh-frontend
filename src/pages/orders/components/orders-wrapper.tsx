@@ -1,6 +1,6 @@
 import twc from 'tw-classnames';
 
-import Alert from 'components/alert/alert';
+import Alert from 'components/core-ui/alert/alert';
 import { ICardProps } from 'components/core-ui/card/ICard';
 import Card from 'components/core-ui/card/card';
 

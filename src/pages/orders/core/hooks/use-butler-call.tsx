@@ -1,4 +1,4 @@
-import useAlert from 'components/alert/use-alert';
+import useAlert from 'components/core-ui/alert/use-alert';
 
 const useButlerCall = () => {
   const { showAlert, hideAlert, show } = useAlert();

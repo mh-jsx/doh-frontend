@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import Button from 'components/button/button';
+import Button from 'components/core-ui/button/button';
 
 import PantryIcon from 'assets/icons/pantry.svg?react';
 import TickIcon from 'assets/icons/tick.svg?react';

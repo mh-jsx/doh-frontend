@@ -80,11 +80,17 @@ export default {
   plugins: [
     plugin(({ addVariant, addUtilities }) => {
       addVariant('path-stroke', ['&>g>g>line', '&>g>g>path', '&>g>g>rect', '&>g>path', '&>g>line']),
+        addVariant('path-fill', ['&>g>g>line', '&>g>g>path', '&>g>g>rect', '&>g>path', '&>g>line']),
         addUtilities({
           '.flex-centered': {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+          },
+          '.centered-xy': {
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
           },
         });
     }),

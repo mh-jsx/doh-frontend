@@ -1,5 +1,7 @@
+import Video from 'components/core-ui/video/video';
+
 function Presentations() {
-  return <div>presentations</div>;
+  return <Video />;
 }
 
 export default Presentations;

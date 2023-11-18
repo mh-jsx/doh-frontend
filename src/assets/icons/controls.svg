@@ -1,0 +1,21 @@
+<svg id="Group_2434" data-name="Group 2434" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.704" height="28.738" viewBox="0 0 32.704 28.738">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_808" data-name="Rectangle 808" width="32.704" height="28.738" fill="none" stroke="#fff" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1788" data-name="Group 1788" transform="translate(1.12 1.12)">
+    <g id="Group_1792" data-name="Group 1792">
+      <line id="Line_5" data-name="Line 5" y2="26.499" transform="translate(3.138)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_6" data-name="Line 6" y2="26.499" transform="translate(15.232)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_7" data-name="Line 7" y2="26.499" transform="translate(27.326)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_8" data-name="Line 8" x2="6.276" transform="translate(0 6.401)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+  <line id="Line_9" data-name="Line 9" x2="6.276" transform="translate(13.214 24.114)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <g id="Group_1790" data-name="Group 1790" transform="translate(0 0)">
+    <g id="Group_1789" data-name="Group 1789" clip-path="url(#clip-path)">
+      <line id="Line_10" data-name="Line 10" x2="6.276" transform="translate(25.309 14.369)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

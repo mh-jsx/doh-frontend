@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { Navigate, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
 import Layout from 'components/layout/layout';
@@ -5,10 +6,15 @@ import Layout from 'components/layout/layout';
 import ErrorBoundary from 'routes/error-boundary';
 
 import Error from 'pages/error/error';
-import Presentations from 'pages/presentation/presentations';
 
 import { PrivateRoutes } from './private-routes';
 import WithSuspense from './with-suspense';
+
+const Orders = lazy(() => import('pages/orders/orders'));
+const PersonalAssistant = lazy(() => import('pages/personal-assistant/personal-assistant'));
+const Presentations = lazy(() => import('pages/presentation/presentations'));
+const Report = lazy(() => import('pages/report/report'));
+const Controls = lazy(() => import('pages/controls/controls'));
 
 function AppRoutes() {
   // TODO: get current user from AUTH context
@@ -18,6 +24,10 @@ function AppRoutes() {
     createRoutesFromElements(
       <Route element={<Layout />} errorElement={<ErrorBoundary />}>
         <Route path='/' element={<Presentations />} />
+        <Route path='/controls' element={<Controls />} />
+        <Route path='/orders' element={<Orders />} />
+        <Route path='/report' element={<Report />} />
+        <Route path='/personal-assistant' element={<PersonalAssistant />} />
 
         {currentUser && (
           <>
